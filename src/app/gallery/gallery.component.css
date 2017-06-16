@@ -1,0 +1,48 @@
+.gallery-container {
+  position: relative;
+}
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 770px;
+}
+.dialogOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EDEDED;
+  opacity: 0.9;
+  z-index: 2;
+  cursor: pointer;
+}
+.dialog {
+  width: 430px;
+  margin-top: 70px;
+  margin-left: 180px;
+}
+
+.close-dialog img {
+  width:20px;
+  height: 20px;
+}
+.center-text {
+  float: left;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.caption {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;/*72 is too big should be a mistake*/
+  color: #737A6E;
+}
+.hint {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #737A6E;
+}

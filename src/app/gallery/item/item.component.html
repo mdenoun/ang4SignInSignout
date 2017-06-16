@@ -1,0 +1,16 @@
+<div class="item-container" [style.width]="containerWidth+'px'" [style.height]="containerHeight+'px'" [style.padding]="padding+'px'">
+  <div (click)="onImgClicked.emit(item)" class="img-container">
+    <img [src]="fileDir+'/'+item.pic" [style.width]="picWidthPx+'px'" [style.height]="picHeightPx+'px'"
+         class="img-circle" [style.borderColor]="item.color"/>
+    <div *ngIf="showOverlay" class="overlay" [style.background-color]="item.color">
+      <div class="caption">
+        <div *ngIf="!overlayText">
+          <div class="center">{{item.capitalizedName}}</div>
+          <div class="center">IS</div>
+          <div class="center">HERE</div>
+        </div>
+        <div *ngIf="overlayText">{{overlayText}}</div>
+      </div>
+    </div>
+  </div>
+</div>
