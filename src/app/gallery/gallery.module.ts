@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { GalleryComponent } from './gallery.component';
 import {GalleryService} from "./gallery.service";
 import { ItemComponent } from './item/item.component';
-import { ItemConfirmationComponent } from './item-confirmation/item-confirmation.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [GalleryComponent, ItemComponent, ItemConfirmationComponent],
+  declarations: [GalleryComponent, ItemComponent],
   exports: [GalleryComponent],
   providers: [GalleryService]
 })
