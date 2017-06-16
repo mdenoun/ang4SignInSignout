@@ -1,0 +1,19 @@
+<div class="gallery-container">
+  <div class="items-container">
+    <app-item *ngFor="let item of items" [item]="item" [fileDir]="filePath+'portraits_square'"
+      picWidthPx="150" picWidthPx="150" paddingPicPx="15" [showOverlay]="item.isHere"
+      (onImgClicked)="openConfirmationDialog($event)"></app-item>
+  </div>
+  <div *ngIf="currentItem" class="dialogOverlay">
+    <div class="dialog">
+      <div class="close-dialog pull-right" (click)="onClose()">
+          <img src="../assets/images/x.png"/>
+      </div>
+      <app-item [item]="currentItem"  [fileDir]="filePath+'portraits_square_500x500'"
+                picWidthPx="350" picWidthPx="350" paddingPicPx="40" [showOverlay]="showOverlay" [overlayText]="overlayText"
+                (onImgClicked)="presenceConfirmed($event)"></app-item>
+      <div class="caption center-text">{{caption}}</div>
+      <div *ngIf="hint" class="hint center-text">{{hint}}</div>
+    </div>
+  </div>
+</div>
